@@ -28,10 +28,12 @@ population+=1;
 
 console.log('new population',population);
 
-const isFinlandHasMorePopulation = false;
-const hasLessPeopleThenAvg = false;
+console.log(population > 6);
+console.log(33.5/2 < 33)
 
-let description ='Portugal is in Europe, and its 11 million people speak portuguese';
+let description1 = country +  'is in' + continent + ', and its' + population +' million people speak' + language;
 
 // Strings and Template Literals
-description = `Portugal is in Europe, and its 11 million people speak portuguese`;
+let description2 = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
+
+console.log(description2);
