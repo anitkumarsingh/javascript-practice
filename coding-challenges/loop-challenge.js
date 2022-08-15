@@ -33,29 +33,29 @@ const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips = [];
 const total = [];
 
-const calcTips = (arr) => {
-	for (let i = 0; i < arr.length; i++) {
-		if (arr[i] >= 50 && arr[i] <= 300) {
-			tips[i] = arr[i] * 0.15;
-		} else {
-			tips[i] = arr[i] * 0.2;
-		}
-		total[i] = arr[i] + tips[i];
-	}
-	return total;
+const calcTips = arr => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= 50 && arr[i] <= 300) {
+      tips[i] = arr[i] * 0.15;
+    } else {
+      tips[i] = arr[i] * 0.2;
+    }
+    total[i] = arr[i] + tips[i];
+  }
+  return total;
 };
 
 console.log(calcTips(bills));
 
 // Bonus chanllenge
-const calcAverage = (arr) => {
-	let sum = 0;
-	let avg = 0;
-	for (let i = 0; i < arr.length; i++) {
-		sum += arr[i];
-	}
-	avg = sum / arr.length;
-	return avg;
+const calcAverage = arr => {
+  let sum = 0;
+  let avg = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  avg = sum / arr.length;
+  return avg;
 };
 
 calcAverage(total);
