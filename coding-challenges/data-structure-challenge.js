@@ -44,8 +44,9 @@ const gameEvents = new Map([
   [76, '⚽ GOAL'],
   [80, '⚽ GOAL'],
   [92, '🔶 Yellow card'],
-  ]);
+]);
 
-console.log(gameEvents);
-const events = new Set();
-console.log(Object.values(gameEvents))
+const events = new Set([...gameEvents.values()]);
+console.log(events)
+console.log(gameEvents.delete(64));
+console.log(gameEvents)
